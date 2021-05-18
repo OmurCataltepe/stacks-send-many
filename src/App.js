@@ -32,17 +32,23 @@ export default function App(props) {
 
   return (
     <Connect authOptions={authOptions}>
-      <nav className="navbar sticky-top navbar-dark text-light p-2" style={styles}>
-        <a className="navbar-brand" href="/">
-          <img src="/stacks.png" width="100" alt="Logo" />
-        </a>
-        <h1>Send Many</h1>
-        <div>
-          <Rate />
-          <Network />
-          <Auth className="ml-auto" userSession={userSession} />
+      <div style={styles}>
+        <div class="row">
+          <div class="col-md-2 text-center pt-4">
+            <a className="navbar-brand" href="/">
+              <img src="/stacks.png" width="100" alt="Logo" />
+            </a>
+          </div>
+          <div class="offset-md-3 col-md-2 text-center text-white pt-md-5 pt-2">
+            <h1>Send Many</h1>
+         </div>
+         <div class="offset-4 offset-md-4 col-md-1 pt-4 pb-4 col-4 text-white">
+            <Rate />
+            <Network />
+            <Auth className="ml-auto" userSession={userSession} />
+          </div>
         </div>
-      </nav>
+      </div>
 
       <Content userSession={userSession} />
     </Connect>

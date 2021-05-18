@@ -10,7 +10,7 @@ export default function Auth() {
   if (userSession?.isUserSignedIn()) {
     return (
       <button
-        className="btn btn-primary btn-lg"
+        className="btn btn-primary"
         onClick={() => {
           console.log('signOut');
           handleSignOut();
